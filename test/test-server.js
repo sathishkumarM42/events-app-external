@@ -3,7 +3,7 @@ const nock = require('nock');
 const request = require('supertest');
 const app = require('../server');
 
-describe('GET /', function () {
+describe('GET/', function () {
   it('responds with home page', function (done) {
 
     //specify the url to be intercepted
@@ -27,7 +27,7 @@ describe('GET /', function () {
         if (err) {
           return done(err);
         }
-        chai.assert.isTrue(res.text.includes("<h1>Welcome to [TEAM NAME'S] application</h1>"));
+        chai.assert.isTrue(res.text.includes("<h1>Welcome to Fantastic Four application</h1>"));
         return done();
       });
 
